@@ -1,0 +1,209 @@
+$theme-cs-font-size = 1rem
+$theme-cs-category-border-color = #e4e4e4
+$theme-cs-category-border-width = 3px
+$theme-cs-item-counter = 5
+$theme-subtitle-padding-left = 10px
+$theme-item-more-width =60px
+$theme-item-width = $theme-content-width -$theme-item-more-width - $theme-subtitle-padding-left
+$subtitle-width = 150px
+$content-padding = 20px
+$iconfont-margin-bottom = 15px
+.cool-site
+	position:relative
+	margin-bottom: 10px
+	width: $theme-content-width
+	font-size: $theme-cs-font-size
+	font-family:SimHei
+	line-height: 25px
+	background-color: white
+	&:hover
+		.cool-site__category a
+			color: darken($theme-main-color, 20%)
+		.cool-site__category
+			.more
+				opacity: 1
+			a
+				padding-right: 100px
+	&.usual-website
+		z-index: 50
+		.website-list .item
+			margin-bottom: 5px
+	// 常用网址部分
+	.website-list
+		padding: 10px 0
+		font-size: 0
+		.item
+			display: inline-block
+			margin-bottom: 20px
+			width: (100% / 6)
+			font-size: 13px
+			&.more
+				position: relative
+				.iconfont
+					margin-left: auto
+					margin-right: auto
+					width: 35px
+					height: 35px
+					line-height: 27px
+					box-sizing: border-box
+					font-size: 20px
+					color: #ccc
+					border: 3px solid #ccc
+					border-radius: 10px
+				.add-website
+					display: none
+					position: absolute
+					top: 110%
+					padding: 10px 10px
+					text-align: center
+					background-color: #eee
+					border: 1px solid #eee
+					border-radius: 5px
+					box-shadow: 1px 1px 1px 2px #ddd
+					outline: none
+					&:before
+						position: absolute
+						content: ''
+						top: -20px
+						left: 50px
+						border: 10px solid green
+						border-color: transparent transparent #eee transparent
+					input
+						width: 200px
+						font-size: 12px
+						line-height: 1.5
+				.btn
+					margin-top: 15px
+					padding: 2px 15px
+					border: 0
+					border-radius: 2px
+					background-color: #ccc
+					cursor: pointer
+					&:hover
+						background-color: #c0c0c0
+			&:nth-child(6n+0).more
+				.add-website
+					margin-left: -100px
+					&:before
+						left: 160px
+						
+			a
+				display: inline-block
+				padding: 10px 0
+				width: 100%
+				text-align: center
+				cursor: pointer
+				&:hover
+					background-color: #f2f2f2
+		.iconfont
+			display: block
+			margin-bottom: $iconfont-margin-bottom
+			font-size: 35px
+			line-height: 35px
+		.icon-xuexiao
+			color: #003478
+		.icon-NEWS-copy
+			color: #246D96
+		.icon-bbs
+			color: #06A1C8
+		.icon-tushuguan
+			color: #445B6D
+		.icon-laba
+			color: #84818A
+		.icon-mingxing
+			color: #330000
+		.icon-yuyue
+			color: #58BB7A
+		.icon-banche
+			color: #D6D189
+		.icon-ditu
+			color: #a26b6a
+		.icon-jiaoxue
+			color: #769cea
+		.icon-shoucang
+			margin-bottom: ($iconfont-margin-bottom + 5)
+			color: #A06FB7
+		.myself
+			a
+				position: relative
+			.icon-shanchu
+				display: none
+				position: absolute
+				top: 0
+				right: 0
+				padding: 1px 5px
+				font-size: 20px
+				color: red
+				background-color: #ddd
+				&:hover
+					background-color: rgba(255, 0, 0, .2)
+			&:hover .icon-shanchu
+				display: block
+	.cool-site__category
+		padding: 15px 0 30px 0
+		.more
+			opacity: 0
+			margin-left: 5px
+			width: 0
+			font-size: 13px
+			font-weight: lighter
+			color: #d52525
+			transition: all .3s
+			&:hover
+				text-decoration: underline
+		a
+			display: inline-block
+			margin-bottom: -($theme-cs-category-border-width)
+			padding: 2px 50px 2px 20px
+			//border-bottom: $theme-cs-category-border-width solid $theme-main-color 去掉了滑动的蓝色条
+			font-weight: bold
+			color: darken($theme-main-color, 20%)
+			background-color: #B7DBF7
+			background: -ms-linear-gradient(left, #B7DBF7 0%, #ffffff 100%);
+			background-image: -webkit-linear-gradient(left,#B7DBF7,#BEDEEF, white);
+			transition: padding .5s
+	.cool-site__panel
+		position: relative
+		padding: 0 0 10px
+	.panel-item
+		position: relative
+		margin-bottom: 20px
+		padding-left: $subtitle-width
+	.subTitle, .cool-site__list
+		display: inline-block
+	.subTitle
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		width: $subtitle-width
+		.link
+			position: absolute
+			display: inline-block
+			left: 20px
+			top: 50%
+			transform: translate(0, -50%)
+			font-size: 16px
+			color: #2A4E74
+			&:hover
+				color: lighten(#2A4E74, 30%)
+				text-shadow: 1px 1px 2px #ddd
+	.cool-site__list
+		font-size: 0
+		width: 100%
+		.cool-site__list-item
+			display: inline-block
+			width: 25%
+			line-height: 1
+			font-size: 14px
+			vertical-align: middle
+			cursor: pointer
+			&.image-tip
+				position: relative
+			a:hover
+				color: #da5555
+				text-decoration: underline
+.switch-site
+	display: none
+	&.active
+		display: block

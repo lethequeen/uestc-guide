@@ -1,0 +1,15 @@
+@keyframes loadingAnimation
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
+.loading
+	position: relative
+	width: 16px
+	height: 16px
+	border-radius: 50%
+	border: 3px solid rgba(0, 0, 0, 0.1)
+	border-left: 3px solid rgba(0, 0, 0, 0.4)
+	-webkit-animation: loadingAnimation 1s infinite linear
+	animation: loadingAnimation 1s infinite linear
+		

@@ -1,0 +1,52 @@
+$main-height = 80px
+.headerbar
+	position: relative
+	margin: 0 auto
+	width: $theme-main-width
+	height: $main-height
+	.weather, .logo
+		display: inline-block
+	.weather
+		position: absolute
+		left: 0
+		bottom: 0
+		height: 60px
+		font-size: 14px
+		.city, .condition
+			display: inline-block
+		.city
+			width: 60px
+			text-align: center
+			line-height: 2
+			.tip
+				font-size: 12px
+				color: #999
+		.condition
+			width: 140px
+			text-align: center
+			img
+				display: block
+				margin: 0 auto 10px
+			span
+				font-size: 13px
+				color: #555
+			span:first-child
+				margin-right: 10px
+	.logo
+		position: absolute
+		margin-left: 50%
+		transform: translateX(-50%)
+		width: 200px
+		height: $main-height
+		img
+			position: absolute
+			top: 50%
+			left: 0
+			transform: translateY(-50%)
+	.statistic
+		display: inline-block
+		position: absolute
+		right: 0
+		bottom: 0
+		font-size: 13px
+		line-height: 1.5

@@ -1,0 +1,59 @@
+$date-color = #9f9f9f
+$title-color1 = #4C749D
+$title-color2 = #55496F
+.hot-news
+	margin-bottom: 10px
+	width: 100%
+	font-size: 14px
+	background-color: white
+	&.hot-news2
+		.c-title
+			color: $title-color2
+			background-color: lighten($title-color2, 80%)
+		.hotNews__item .title:hover a
+			color: lighten($title-color2, 20%)
+	.c-title
+		position: relative
+		height: 50px
+		line-height: 50px
+		font-size: 14px
+		font-weight: bold
+		padding-left: 10px
+		color: $title-color1
+		background-color: lighten($title-color1, 80%)
+		&:after
+			position: absolute
+			content: ''
+			left: 15%
+			bottom: 0
+			border: 10px solid transparent
+			border-bottom-color: white
+	.news-content
+		padding: 0 10px
+		line-height: 1.5
+	.hotNews__item
+		margin-top: 10px
+		.info
+			font-size: 12px
+		.title
+			margin-bottom: 4px
+			&:hover
+				a
+					color: $title-color1
+					text-shadow: 0 0 1px #ccc
+					transition: color .2s
+		.date
+			color: $date-color
+		.author
+			margin-left: 10px
+			color: lighten($title-color1, 10%)
+			// cursor: pointer
+			// &:hover
+			// 	color: darken($title-color1, 10%)
+	.news-more
+		text-align: right
+		a
+			display: inline-block
+			margin: 10px
+			font-size: 14px
+			color: darken($title-color1, 10%)

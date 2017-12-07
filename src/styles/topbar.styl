@@ -1,0 +1,55 @@
+$padding-vertical = 25px
+$height = 50px
+$padding-horizontal = 20px
+
+.topbar
+	position: relative
+	height: $height
+	z-index: 10000
+	background: $theme-main-color url('../images/header.png') 
+	// background-color: $theme-main-color 
+	.topbar-box
+		width: 100%
+		height: $height
+		background: $theme-main-color url('../images/header.png') 
+		// background-color: $theme-main-color
+	&.fixed .topbar-box
+		position: fixed
+	.topbar__main
+		margin-left: 80px
+		font-size: 0
+		&:before
+			position: fixed
+			content: ''
+			top: 0
+			left: 0
+			width: 100%
+			height: $height
+			// background-color: $theme-main-color
+	&.fixed .topbar__main
+		position: fixed
+	a
+		font-size: 14px
+		color: white
+		cursor: pointer
+		&:hover
+			color: lighten($theme-main-color, 70%)
+	.topbar__link-item
+		position: relative
+		display: inline-block
+		padding: $padding-vertical $padding-horizontal
+		// &:not(:last-child):after
+		// 	position: absolute
+		// 	display: block;
+		// 	content: ''
+		// 	top: $padding-vertical
+		// 	right: 0
+		// 	bottom: $padding-vertical
+		// 	width: 1px
+		// 	background-color: lighten($theme-main-color, 20%)
+	.topbar__language
+		a
+			font-size: 13px
+			color: lighten($theme-main-color, 50%)
+			&:hover
+				color: white

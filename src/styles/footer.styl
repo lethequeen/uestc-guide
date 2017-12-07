@@ -1,0 +1,33 @@
+.footer
+	margin-top: 10px
+	padding: 15px 0 40px
+	color: darken($theme-footer-text-color,30%)
+	background: $theme-footer-bg-color url('../images/footer.png')
+	background-repeat: repeat
+	// background-color: $theme-footer-bg-color
+	.footer__panel
+		float: left
+		width: (100%)
+		text-align: center
+		margin-top:15px
+	.links
+		font-size: 0
+		color: darken($theme-footer-text-color,30%)
+		a
+			color: darken($theme-footer-text-color,30%)
+			&:hover
+				color: $theme-footer-text-color
+		.item
+			display: inline-block
+			position: relative
+			padding: 0 6px
+			font-size: 14px
+			&:not(:last-child):after
+				position: absolute
+				content: ''
+				top: 0
+				right: 0
+				bottom: 0
+				width: 1px
+				background-color: $theme-footer-text-color
+			

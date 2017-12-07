@@ -1,0 +1,42 @@
+$theme-menu-active-color = $theme-main-color
+$theme-menu-border-width = 3px
+
+.menu
+	margin-top: 15px
+	padding: 10px 0
+	width: $theme-sidebar-width
+	text-align: center
+	border: 1px solid #ddd
+	box-shadow: 1px 2px 4px $theme-box-border-color
+	.menu__item
+		border-right: $theme-menu-border-width solid transparent
+		font-family: 'Microsoft YaHei'
+		font-weight: bold
+		&:not(:last-child)
+			margin-top: 5px
+		&:hover
+			border-right: $theme-menu-border-width solid $theme-main-color
+		a
+			display: inline-block
+			padding: 10px 0
+			width: 100%
+			transition: all .2s ease-out
+			&:hover
+				padding-left: 2px
+				color: $theme-menu-active-color
+	.menu__item--active
+		border-right: $theme-menu-border-width solid $theme-main-color
+		a
+			color: $theme-menu-active-color
+	// icon
+	.item1
+		background: url($theme-icon-url) no-repeat 25px -5px
+	.item2
+		background: url($theme-icon-url) no-repeat 25px -37px
+	.item3
+		background: url($theme-icon-url) no-repeat 25px -80px
+	.item4
+		background: url($theme-icon-url) no-repeat 25px -120px
+	.item5
+		background: url($theme-icon-url) no-repeat 25px -155px
+    

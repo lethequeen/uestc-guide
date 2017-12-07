@@ -1,0 +1,120 @@
+$search-engine-width = 100px
+$search-engine-height = 35px
+$search-border-color = #37A3F6
+$search-box-height = 35px
+.search
+	position: relative
+	margin: 0 auto 10px
+	padding: 30px 0
+	width: $theme-main-width
+	text-align: center
+	background-color: white
+	z-index: 100
+	.search-engine
+		position: relative
+		display: inline-block
+		margin-right: 20px
+		width: $search-engine-width
+		height: $search-engine-height
+		vertical-align: middle
+		.g-toggle
+			position: absolute
+			display: inline-block
+			border-style: solid
+			border-width: 8px 4px
+			border-color: gray transparent transparent
+			right: -5px
+			top: 50%
+			transition: all .3s
+			cursor: pointer
+		&.show
+			.list-show-icon
+				transform-origin: 50% 20%
+				transform: rotateX(180deg)
+			.engine-list
+				margin-top: 4px;
+				visibility: visible
+				opacity: 1
+				background-color: white
+	.engine-list
+		position: absolute
+		top: 100%
+		left: 0
+		width: 100%
+		font-size: 0
+		transition: all .2s
+		border: 1px solid $theme-box-border-color
+		visibility: hidden
+		opacity: 0
+		.item
+			cursor: pointer
+			&:hover
+				background-color: #f6f6f6
+			&:not(:last-child)
+				border-bottom: 1px solid $theme-box-border-color
+	.engine-list .item, .eng-logo
+		display: inline-block;
+		width: 100%
+		height: $search-engine-height
+		overflow: hidden
+	[data-search-status="s-baidu"],[data-search-status="s-360"]
+		background: transparent url('../images/all_logo.png') no-repeat scroll center
+	[data-search-status="s-baidu"]
+		background-position: 4px 1px
+	[data-search-status="s-360"]
+		background-position: 4px -658px
+	[data-search-type="text"]
+		background: white
+		line-height: $search-engine-height
+		font-size: 16px
+		color: #666
+		text-align: center
+	// search-box
+	.search-input-box
+		display: inline-block
+		margin-left: 50px
+		font-size: 0
+		.search-input
+			display: inline-block
+			width: 600px
+			height: $search-box-height
+			vertical-align: middle
+			box-sizing: border-box
+			border: 1px solid $search-border-color
+			input
+				margin: 0
+				padding: 0
+				border: 0
+				width: 100%
+				height: 100%
+				text-indent: 5px
+		.su-list
+			display: none
+			border: 1px solid $theme-box-border-color
+			box-shadow: 3px 3px 5px $theme-box-border-color
+			background-color: white
+			text-align: left
+			&.show
+				display: block
+			.item
+				padding: 5px 10px
+				font-size: 14px
+				cursor: pointer
+				&:hover
+					background-color: #f0f0f0
+			// a
+			// 	display: block
+			// 	padding: 5px 10px
+			// 	font-size: 14px
+			// 	cursor: pointer
+		.search-btn
+			height: $search-box-height
+			padding: 0 20px
+			border: 0
+			vertical-align: middle
+			color: white
+			background-color: $search-border-color
+			cursor: pointer
+			&:hover
+				background-color: darken($search-border-color, 10%)
+	
