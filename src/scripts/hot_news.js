@@ -2,13 +2,13 @@
 (function(window, undefined) {
     // 清水河畔api
     // var api_qshp = 'http://bbs.uestc.edu.cn/mobcent/app/web/index.php?r=portal/newslist&moduleId=2';
-    var api_qshp = 'http://bbs.stuhome.net/forum.php?mod=forumdisplay&fid=219';
+    var api_qshp = '';
     
     // 成电智讯api
-    var api_cdzx = 'http://lightnews.stuhome.net/';
+    var api_cdzx = 'https://lightnews.stuhome.net/article/weekHotArticleList_ajax';
     // 师说api
     // var api_ss = 'https://masterblog.uestc.edu.cn/api/web/blogs/hot';
-    var api_ss = 'https://masterblog.uestc.edu.cn/';
+    var api_ss = 'https://masterblog.uestc.edu.cn/api/web/blogs/hot?limit=8';
 
     // 博客api
     // var api_bk = '';
@@ -17,16 +17,16 @@
     function formatDate(d) {
         return d.getFullYear() + '.' + (d.getMonth() + 1) + '.' + d.getDate();
     }
-    $.ajax({
-        type: 'GET',
-        url: api_qshp,
-        success: function(data) {
-            hotNews1Box.insertBefore(getNewsList(dataQSHP(data)),hotNews1Box.firstChild);
-        },
-        error: function() {
-            console.log('调用清水河畔api出现错误');
-        }
-    });
+    // $.ajax({
+    //     type: 'GET',
+    //     url: api_qshp,
+    //     success: function(data) {
+    //      hotNews1Box.insertBefore(getNewsList(dataQSHP(data)),hotNews1Box.firstChild);
+    //     },
+    //     error: function() {
+    //         console.log('调用清水河畔api出现错误');
+    //     }
+    // });
     $.ajax({
         type: 'GET',
         url: api_cdzx,
@@ -84,7 +84,7 @@
     			author: item.auther.name,
     			p_date: formatDate(new Date(parseInt(item.blog.create_time) * 1000)),
     			// link: item.blog.url
-                link: "https://masterblog.uestc.edu.cn/" + item.blog._id
+                link: "//masterblog.uestc.edu.cn/blog/" + item.blog._id
     		});
     	});
     	return list;
